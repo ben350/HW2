@@ -1,0 +1,20 @@
+<% content_for :title do %>PIZZAA<% end %>
+<% content_for :description do %>Receive pizza menu<% end %>
+<section>
+  <img src="http://reyesnypizza.com/images/background.jpg">
+</section>
+<section>
+  <div class="column">
+    <h2>Receive Special Offers.</h2>
+  </div>
+  <div class="column">
+    <div class="form-centered">
+      <%= simple_form_for @visitor do |f| %>
+        <%= f.error_notification %>
+        <%= f.input :email, label: false, :placeholder => 'Your email address...' %>
+        <br/>
+        <%= f.button :submit, "Sign up to receive special offers", :class => "submit" %>
+      <% end %>
+    </div>
+  </div>
+</section>
